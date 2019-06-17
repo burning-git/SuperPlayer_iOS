@@ -39,7 +39,7 @@ Pod::Spec.new do |spec|
      spec.subspec "Professional" do |s|
          s.dependency 'SuperPlayer/Core'
          s.dependency 'TXLiteAVSDK_Professional', '~> 6.5.7273'
- #        s.vendored_framework = "Frameworks/TXLiteAVSDK_Professional.framework"
+#         s.vendored_framework = "Frameworks/TXLiteAVSDK_Professional.framework"
      end
 #     spec.subspec "Enterprise" do |s|
 #         s.dependency 'SuperPlayer/Core'
