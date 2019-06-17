@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
     spec.dependency 'MMLayout'
 
     spec.static_framework = true
-    spec.default_subspec = 'Player'
+    spec.default_subspec = 'Professional'
 
     spec.ios.framework    = ['SystemConfiguration','CoreTelephony', 'VideoToolbox', 'CoreGraphics', 'AVFoundation', 'Accelerate']
     spec.ios.library = 'z', 'resolv', 'iconv', 'stdc++', 'c++', 'sqlite3'
@@ -27,20 +27,20 @@ Pod::Spec.new do |spec|
     # end
 
     
-    spec.subspec "Player" do |s|
-        s.source_files = 'SuperPlayer/**/*.{h,m}'
-        s.private_header_files = 'SuperPlayer/Utils/TXBitrateItemHelper.h', 'SuperPlayer/Views/SuperPlayerView+Private.h'
-        s.resource = 'SuperPlayer/Resource/*'
-#如果要使用cocopods管理的TXLiteAVSDK_Player，就不注释这一行
-#        s.dependency 'TXLiteAVSDK_Player', '= 5.3.6001'
-#如果要使用最新的TXLiteAVSDK_Player，就不注释这一行
-        s.vendored_framework = "Frameworks/TXLiteAVSDK_Player.framework"
-    end
-#     spec.subspec "Professional" do |s|
-#         s.dependency 'SuperPlayer/Core'
-#         s.dependency 'TXLiteAVSDK_Professional', '~> 5.2.5539'
-# #        s.vendored_framework = "Frameworks/TXLiteAVSDK_Professional.framework"
-#     end
+#    spec.subspec "Player" do |s|
+#        s.source_files = 'SuperPlayer/**/*.{h,m}'
+#        s.private_header_files = 'SuperPlayer/Utils/TXBitrateItemHelper.h', 'SuperPlayer/Views/SuperPlayerView+Private.h'
+#        s.resource = 'SuperPlayer/Resource/*'
+##如果要使用cocopods管理的TXLiteAVSDK_Player，就不注释这一行
+##        s.dependency 'TXLiteAVSDK_Player', '= 5.3.6001'
+##如果要使用最新的TXLiteAVSDK_Player，就不注释这一行
+#        s.vendored_framework = "Frameworks/TXLiteAVSDK_Player.framework"
+#    end
+     spec.subspec "Professional" do |s|
+         s.dependency 'SuperPlayer/Core'
+         s.dependency 'TXLiteAVSDK_Professional', '~> 6.5.7273'
+ #        s.vendored_framework = "Frameworks/TXLiteAVSDK_Professional.framework"
+     end
 #     spec.subspec "Enterprise" do |s|
 #         s.dependency 'SuperPlayer/Core'
 #         s.dependency 'TXLiteAVSDK_Enterprise', '~> 5.2.5539'
