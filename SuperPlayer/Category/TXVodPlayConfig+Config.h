@@ -5,11 +5,15 @@
 //  Created by git burning on 2019/6/18.
 //
 
-#import <TXLiteAVSDK_Professional/TXLiteAVSDK_Professional.h>
+#import "TXVodPlayConfig.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface TXVodPlayConfig (Config)
+    /**
+     * FairPlay 凭证数据
+     */
+@property NSData *certificate;
 
 @end
 

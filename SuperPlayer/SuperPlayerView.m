@@ -11,7 +11,7 @@
 #import "TXBitrateItemHelper.h"
 #import "UIView+MMLayout.h"
 #import "SPDefaultControlView.h"
-
+#import "Category/TXVodPlayConfig+Config.h"
 static UISlider * _volumeSlider;
 
 #define CellPlayerFatherViewTag  200
@@ -1333,7 +1333,8 @@ static UISlider * _volumeSlider;
         } else if (EvtID == PLAY_EVT_PLAY_END) {
             [self.controlView setProgressTime:[self playDuration] totalTime:[self playDuration] progressValue:1.f playableValue:1.f];
             [self moviePlayDidEnd];
-        } else if (EvtID == PLAY_ERR_NET_DISCONNECT || EvtID == PLAY_ERR_FILE_NOT_FOUND || EvtID == PLAY_ERR_HLS_KEY || EvtID == PLAY_ERR_VOD_LOAD_LICENSE_FAIL) {
+        } else if (EvtID == PLAY_ERR_NET_DISCONNECT || EvtID == PLAY_ERR_FILE_NOT_FOUND || EvtID == PLAY_ERR_HLS_KEY ) {
+            //|| EvtID == PLAY_ERR_VOD_LOAD_LICENSE_FAIL
             // DRM视频播放失败自动降级
             if ([self.playerModel.drmType isEqualToString:kDrmType_FairPlay]) {
                 if ([self.playerModel canSetDrmType:kDrmType_SimpleAES]) {

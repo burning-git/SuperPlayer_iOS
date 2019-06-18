@@ -4,7 +4,17 @@
 #import "TXImageSprite.h"
 #import "TXLiveBase.h"
 #else
-#import <TXLiteAVSDK_Player/TXLiteAVSDK.h>
+//#import <TXLiteAVSDK_Professional/TXVodPlayer.h>
+#import <TXLiteAVSDK_Professional/TXVodPlayer.h>
+#import <TXLiteAVSDK_Professional/TXLivePlayer.h>
+#import <TXLiteAVSDK_Professional/TXImageSprite.h>
+#import <TXLiteAVSDK_Professional/TXLiveBase.h>
+//
+//#import "TXVodPlayer.h"
+//#import "TXLivePlayer.h"
+//#import "TXImageSprite.h"
+//#import "TXLiveBase.h"
+//#import <TXLiteAVSDK_Player/TXLiteAVSDK.h>
 #endif
 
 #import "SuperPlayerView.h"
@@ -14,6 +24,8 @@
 #import "SuperPlayerWindow.h"
 #import "SPDefaultControlView.h"
 #import "SPWeiboControlView.h"
+
+//#import "TXVodPlayConfig+Config.h"
 
 // player的单例
 #define SuperPlayerShared                   [SuperPlayerSharedView sharedInstance]
