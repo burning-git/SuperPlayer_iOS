@@ -17,10 +17,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
-        
-        let thePlayer = SuperPlayerView(frame: self.view.frame);
-        thePlayer.fatherView = self.view
+        let screen = UIScreen.main.bounds
+
+        let playView = UIView()
+        self.view.addSubview(playView)
+        playView.frame = CGRect(x: 0, y: 0, width: screen.width, height: 200)
+        let thePlayer = SuperPlayerView(frame: CGRect(x: 0, y: 0, width: screen.width, height: 200));
+        thePlayer.fatherView = playView
         let model = SuperPlayerModel()
         model.videoURL = "http://1253131631.vod2.myqcloud.com/26f327f9vodgzp1253131631/f4c0c9e59031868222924048327/f0.mp4"
         thePlayer.play(with: model)
