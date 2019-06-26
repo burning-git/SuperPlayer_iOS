@@ -668,7 +668,9 @@
         self.videoSlider.value           = progress;
     }
     // 更新当前播放时间
-    self.currentTimeLabel.text = [StrUtils timeFormat:currentTime];
+    if (!self.isLive) {
+        self.currentTimeLabel.text = [StrUtils timeFormat:currentTime];
+    }
     // 更新总时间
     self.totalTimeLabel.text = [StrUtils timeFormat:totalTime];
     [self.videoSlider.progressView setProgress:playable animated:NO];
