@@ -44,7 +44,7 @@ Pod::Spec.new do |spec|
         #修改
 #        pod 'TXLiteAVSDK_Professional_Rename', '~> 5.2.5541'
 #        s.dependency 'TXLiteAVSDK_Professional_Rename', '~> 5.2.5541'
-         s.dependency 'TXLiteAVSDK_Professional', '~> 6.5.7273'
+         s.dependency 'TXLiteAVSDK_Professional', '~> 6.4.7328'
 #         s.vendored_framework = "Frameworks/TXLiteAVSDK_Professional.framework"
      end
 #     spec.subspec "Enterprise" do |s|
